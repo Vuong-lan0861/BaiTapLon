@@ -5,6 +5,6 @@ public interface IProduct {
 
     void inputData(Scanner sc);
     void displayData();
-    void calProfit();
+    double calProfit();
 
 }

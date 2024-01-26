@@ -24,6 +24,10 @@ public class Product implements IProduct {
         this.categoryId = categoryId;
     }
 
+    public Product() {
+
+    }
+
     public String getId() {
         return id;
     }
@@ -154,15 +158,14 @@ public class Product implements IProduct {
         System.out.println("Tên: " + name);
         System.out.println("Giá nhập: " + importPrice);
         System.out.println("Giá bán: " + exportPrice);
-        System.out.println("Lợi nhuận: " + profit);
+        System.out.println("Lợi nhuận: " +calProfit());
         System.out.println("Mô tả: " + description);
         System.out.println("Trạng thái: " + (status ? "Còn hàng" : "Ngừng kinh doanh"));
         System.out.println("Mã danh mục: " + categoryId);
     }
 
     @Override
-    public void calProfit() {
-
-        profit = exportPrice - importPrice;
+    public double calProfit() {
+        return profit = exportPrice - importPrice;
     }
 }

@@ -348,27 +348,28 @@ public class Store {
 
     private void addNewProduct() {
         // Nhập giá trị cho các tham số của Product từ bất kỳ nguồn dữ liệu nào bạn muốn
-        System.out.print("Nhập ID sản phẩm: ");
-        String id = scanner.next();
-        scanner.nextLine();
-        System.out.print("Nhập tên sản phẩm: ");
-        String name = scanner.nextLine();
-
-        System.out.print("Nhập giá nhập: ");
-        double importPrice = scanner.nextDouble();
-
-        System.out.print("Nhập giá bán: ");
-        double exportPrice = scanner.nextDouble();
-
-        System.out.print("Nhập mô tả sản phẩm: ");
-        String description = scanner.nextLine();
-
-        System.out.print("Nhập trạng thái sản phẩm (true/false): ");
-        boolean status = scanner.nextBoolean();
-
-        System.out.print("Nhập mã danh mục sản phẩm: ");
-        int categoryId = scanner.nextInt();
-        Product newProduct = new Product(id, name, importPrice, exportPrice, description, status, categoryId);
+//        System.out.print("Nhập ID sản phẩm: ");
+//        String id = scanner.next();
+//        scanner.nextLine();
+//        System.out.print("Nhập tên sản phẩm: ");
+//        String name = scanner.nextLine();
+//
+//        System.out.print("Nhập giá nhập: ");
+//        double importPrice = scanner.nextDouble();
+//
+//        System.out.print("Nhập giá bán: ");
+//        double exportPrice = scanner.nextDouble();
+//
+//        System.out.print("Nhập mô tả sản phẩm: ");
+//        String description = scanner.nextLine();
+//
+//        System.out.print("Nhập trạng thái sản phẩm (true/false): ");
+//        boolean status = scanner.nextBoolean();
+//
+//        System.out.print("Nhập mã danh mục sản phẩm: ");
+//        int categoryId = scanner.nextInt();
+//        Product newProduct = new Product(id, name, importPrice, exportPrice, description, status, categoryId);
+        Product newProduct = new Product();
         newProduct.inputData(scanner);
         products.add(newProduct);
         saveProductsToFile();
